@@ -1,0 +1,21 @@
+# Exercice 7
+
+sommets = ["A", "B", "C", "D", "E"]
+degres = [2, 3, 1, 4, 2]
+
+degre_max = max(degres)
+degre_min = min(degres)
+somme_degres = sum(degres)
+
+print(f"Degré maximum : {degre_max}")
+print(f"Degré minimum : {degre_min}")
+print(f"Somme des degrés : {somme_degres}")
+
+for indice, sommet in enumerate(sommets):
+    if degres[indice] == degre_max:
+        print(f"Sommet de degré maximum : {sommet}")
+
+if len(set(degres)) == 1:
+    print("Le graphe est régulier")
+else:
+    print("Le graphe n'est pas régulier")
