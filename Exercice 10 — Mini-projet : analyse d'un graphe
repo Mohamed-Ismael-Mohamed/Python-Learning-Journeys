@@ -1,0 +1,44 @@
+# Exercice 10
+
+sommets = ["A", "B", "C", "D", "E"]
+
+aretes = [
+    ("A", "B", 5),
+    ("A", "C", 3),
+    ("B", "D", 4),
+    ("C", "D", 2),
+    ("D", "E", 6)
+]
+
+print("===== INFORMATIONS DU GRAPHE =====")
+print(f"Nombre de sommets : {len(sommets)}")
+print(f"Nombre d'arêtes : {len(aretes)}")
+
+total_poids = 0
+
+print("\n===== LISTE DES ARÊTES =====")
+
+for indice, (u, v, poids) in enumerate(aretes, start=1):
+    print(f"{indice}. {u} -> {v}, poids = {poids}")
+    total_poids = total_poids + poids
+
+print(f"\nPoids total : {total_poids}")
+
+adjacence = {}
+
+for sommet in sommets:
+    adjacence[sommet] = []
+
+for u, v, poids in aretes:
+    adjacence[u].append(v)
+    adjacence[v].append(u)
+
+print("\n===== LISTE D'ADJACENCE =====")
+
+for sommet, voisins in adjacence.items():
+    print(f"{sommet} : {voisins}")
+
+print("\n===== DEGRÉS DES SOMMETS =====")
+
+for sommet, voisins in adjacence.items():
+    print(f"Degré de {sommet} : {len(voisins)}")
