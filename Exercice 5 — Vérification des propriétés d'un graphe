@@ -1,0 +1,20 @@
+# Exercice 5
+
+sommets = ["A", "B", "C", "D"]
+aretes = [("A", "B"), ("B", "C"), ("C", "D"), ("D", "A")]
+
+oriente = False
+pondere = False
+
+if oriente:
+    print("Le graphe est orienté")
+else:
+    print("Le graphe est non orienté")
+
+if pondere:
+    print("Le graphe est pondéré")
+else:
+    print("Le graphe n'est pas pondéré")
+
+print(f"Nombre de sommets : {len(sommets)}")
+print(f"Nombre d'arêtes : {len(aretes)}")
