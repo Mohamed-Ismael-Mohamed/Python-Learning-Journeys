@@ -1,0 +1,12 @@
+# Exercice 6
+
+sommets = ["A", "B", "C"]
+
+nouveaux_sommets = ["D", "E", "A", "F", "B"]
+
+for sommet in nouveaux_sommets:
+    if sommet not in sommets:
+        sommets.append(sommet)
+
+print("Liste des sommets :", sommets)
+print(f"Nombre total de sommets : {len(sommets)}")
