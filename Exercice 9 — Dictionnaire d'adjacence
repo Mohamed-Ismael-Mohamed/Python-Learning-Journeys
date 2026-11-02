@@ -1,0 +1,18 @@
+# Exercice 9
+
+adjacence = {
+    "A": ["B", "C"],
+    "B": ["A", "D"],
+    "C": ["A", "D"],
+    "D": ["B", "C"]
+}
+
+for sommet, voisins in adjacence.items():
+    print(f"Sommet {sommet} : {voisins}")
+
+sommet_recherche = "A"
+
+if sommet_recherche in adjacence:
+    print(f"Les voisins de {sommet_recherche} sont : {adjacence[sommet_recherche]}")
+else:
+    print("Ce sommet n'existe pas")
