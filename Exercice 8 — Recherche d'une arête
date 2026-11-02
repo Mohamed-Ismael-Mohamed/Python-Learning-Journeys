@@ -1,0 +1,18 @@
+# Exercice 8
+
+aretes = [("A", "B"), ("B", "C"), ("C", "D"), ("D", "E")]
+
+depart = "C"
+arrivee = "D"
+
+trouve = False
+
+for u, v in aretes:
+    if u == depart and v == arrivee:
+        trouve = True
+        break
+
+if trouve:
+    print(f"L'arête {depart} -> {arrivee} existe")
+else:
+    print(f"L'arête {depart} -> {arrivee} n'existe pas")
